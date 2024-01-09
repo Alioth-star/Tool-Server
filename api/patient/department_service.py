@@ -62,3 +62,5 @@ def department_consultation(symptom: str, db: Session = Depends(get_db)) -> Base
     department_names = query_department_by_symptom(db, symptom)
 
     return BaseResponse(data=[department[0] for department in department_names])
+
+
